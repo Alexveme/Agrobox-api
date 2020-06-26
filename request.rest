@@ -1,0 +1,148 @@
+POST http://localhost:9000/user/register
+Content-Type: application/json
+
+{
+    "user":"alexveme@outlook.com",
+    "password":"123456Av"
+}
+
+###
+
+POST http://localhost:9000/user/login
+Content-Type: application/json
+
+{
+    "user":"alexveme@outlook.com",
+    "password":"123456Av"
+}
+
+###
+
+POST http://localhost:9000/member
+Content-Type: application/json
+
+{
+    "name":"Mario",
+    "surname":"Blanco",
+    "address":"Barcelona",
+    "email":"mario@gmail.com",
+    "phone":"625299119"
+}
+
+###
+GET http://localhost:9000/member/5ee35be679cc630e5f3477a3
+
+###
+
+GET http://localhost:9000/product
+
+###
+
+POST http://localhost:9000/product
+Content-Type: application/json
+
+{
+    "reference":"16-210620V",
+    "name":"Patata",
+    "category":"verdura",
+    "seson":"ninguna"
+}
+
+###
+
+GET http://localhost:9000/product/5ee61bc1bc5859225d7fe1c8
+
+###
+
+DELETE http://localhost:9000/product/5ee61bc1bc5859225d7fe1c8
+
+###
+POST http://localhost:9000/product/5ee61bc1bc5859225d7fe1c8
+Content-Type: application/json
+
+{
+    "name":"Tomate",
+    "seson":"primavera"
+}
+
+###
+
+POST http://localhost:9000/subproduct
+Content-Type: application/json
+
+{
+    "name":"Cebolla Roja",
+    "kilo_price":132,
+    "unit_price":37,
+    "image":"cebollaroja"
+}
+
+###
+
+GET http://localhost:9000/subproduct
+
+###
+
+DELETE http://localhost:9000/subproduct/5ef06b9a3ce26c0521386175
+
+###
+
+POST http://localhost:9000/subproduct/5ef06c663ce26c0521386176
+Content-Type: application/json
+
+{
+    "unit_price":60
+}
+
+###
+
+POST http://localhost:9000/producer
+Content-Type: application/json
+
+{
+    "name":"Can Bros",
+    "reference":101150620,
+    "address":"Sabadell",
+    "phone":673090912,
+    "category":"verduras"
+}
+
+###
+
+GET http://localhost:9000/producer/5ee7803f161f800a9bbcbae8
+
+###
+
+GET http://localhost:9000/producer
+
+###
+
+POST http://localhost:9000/order
+Content-Type: application/json
+
+{
+    "reference":2002150620,
+    "amount":8000,
+    "order_date":"2020-06-10",
+    "shipping_date":"2020-06-10"
+}
+
+### 
+
+GET http://localhost:9000/order/5ee7b6444329d60ffaf1c949
+
+### 
+
+GET http://localhost:9000/order
+
+###
+POST http://localhost:9000/orderDetails
+Content-Type: application/json
+
+{
+    "reference":"OR125-0620",
+    "number_products":36,
+    "amount":3500,
+    "shipping_address":"Sabadell",
+    "shipping_date":"2020-06-06T12:30"
+}
